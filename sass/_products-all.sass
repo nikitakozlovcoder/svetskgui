@@ -1,0 +1,34 @@
+.products-items-grid
+    .products-items-grid_col_wrap
+        position: relative
+        display: block
+        transform-style: preserve-3d
+        perspective: 1900px
+    .prod_overlay
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: absolute
+        transform-origin: left
+        transform: rotateY(-90deg)
+        transition: transform .3s linear
+        opacity: 0
+        background: rgba(21, 21, 21, 0.94)
+    .prod_overlay_circle
+        margin: 10px 0
+        width: 50px
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        height: 50px
+        border-radius: 50%
+        background-color: #00bfd3
+    .prod_overlay_content
+        text-align: center
+        color: white
+    .products-items-grid_col_wrap:hover .prod_overlay
+        opacity: 1
+        transform: rotateY(0)

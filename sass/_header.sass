@@ -1,0 +1,127 @@
+header
+    background-color: #3f4246
+    position: relative
+    .logo
+        color: #2c3e50
+    .nav
+        padding: 10px 0
+        background-color: white
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 100
+        border-bottom: 1px solid #d0d0d0
+        .wrap
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            align-items: center
+    .toggle_nav
+            cursor: pointer
+            div:nth-child(1)
+                width: 20px
+                margin: 4px 0
+                height: 2px
+                transition: width .3s ease
+                background-color: #515562
+            div:nth-child(2)
+                width: 25px
+                margin: 4px 0
+                height: 2px
+                background-color: #515562
+                transition: width .3s ease
+            div:nth-child(3)
+                width: 30px
+                margin: 4px 0
+                height: 2px
+                background-color: #515562
+    .header_content
+        color: white
+        min-height: 100vh
+        width: 100%
+        overflow-x: hidden
+        font-size: 17px
+        h1
+            font-weight: normal
+            color: white
+            text-transform: initial
+        .slider_item
+            position: relative
+            background-repeat: no-repeat !important
+
+            background-position: center
+            background-image:  url("../img/1920x1080/banner.png")
+            background-size: cover
+            width: 100vw
+            max-width: 100%
+            min-height: 100vh
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            .slider_item_overlay
+                background-color: #000000
+                opacity: .4
+                position: absolute
+                width: 100%
+                height: 100%
+                z-index: 1
+                top: 0
+                left: 0
+            .wrap>*
+                max-width: 600px
+            .wrap
+                z-index: 50
+                text-align: left
+                .slider_item_card
+                    padding-bottom: 80px
+                    background-color: #565656
+                    padding-top: 24px
+                    padding-left: 24px
+                    padding-right: 24px
+                    border-top-left-radius: 25px
+                    border-top-right-radius: 25px
+                    .btn
+                        margin-top: 40px 
+
+
+
+    .links
+        flex-basis: 100%
+        overflow: hidden
+        height: 0
+        transition: height .4s ease
+        .link
+            display: block
+            text-align: center
+            text-transform: uppercase
+            font-weight: 400
+            padding: 10px 0
+            color: #515562
+
+    .slider_inner
+        display: inline-flex
+        transition: transform .6s ease-in
+        position: static
+.controls_slider
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 5px
+    display: flex
+    z-index: 50
+    div
+        cursor: pointer
+        width: 18px
+        margin: 0 2px
+        height: 18px
+        border: 1px solid white
+        border-radius: 50%
+    .active
+        background: white
+        transform: scale(1.1)
+.cross
+    div
+        width: 30px !important
+        background-color: #00bfd3 !important
+

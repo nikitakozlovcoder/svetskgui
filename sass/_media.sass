@@ -1,0 +1,171 @@
+@media screen and (min-width: 500px )
+    .products-items-grid
+        display: flex
+        flex-wrap: wrap
+    .docs_col
+        flex-basis: 50%
+    .docs_cols
+        .docs-wrap
+            display: flex
+            flex-wrap: wrap
+    body
+        text-align: left
+    .showcase_cols
+        display: flex
+        flex-wrap: wrap
+    .work_expand
+        display: none
+    .showcase_col
+        flex-basis: 50%
+        padding: 0 10px
+        text-align: left
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    .products_cols
+        display: flex
+        flex-wrap: wrap
+    .product_col
+        padding: 40px 10px
+        flex-basis: 50%
+    .work_grid_inner
+        display: flex
+        flex-wrap: wrap
+    .work_grid
+        height: auto !important
+
+    .work_item
+        flex-basis: calc(100%/3)
+    .work_item:nth-child(1)
+        flex-basis: 100%
+
+@media screen and (min-width: 650px)
+    .desc
+        display: flex
+        flex-wrap: wrap
+    .desc_block
+        width: 50%
+    .desc_contacts
+        width: 100%
+        padding-right: 50px
+    .desc_form
+        width: 100%
+    .desc_slider
+        padding-right: 50px
+    .footer
+        display: flex !important
+        align-items: center
+        justify-content: space-between
+    .contact_cols
+        display: flex
+        flex-wrap: wrap
+    .contact_col
+        flex-basis: 50%
+        padding-left: 10px
+        padding-right: 10px
+
+@media screen and (min-width: 800px)
+    .desc_form
+        width: 50%
+    .desc_contacts
+        width: 50%
+    .contact-form form
+        max-width: none
+    .about_cols
+        display: flex
+    .about_col
+        flex-basis: 50%
+    .about_col:nth-child(1)
+        margin-top: 50px
+        padding-right: 20px
+    .product_col
+        flex-basis: calc(100%/3)
+    .work_item
+        flex-basis: calc(100%/2)
+    .work_item:nth-child(2)
+        flex-basis: 39%
+    .work_item:nth-child(1)
+        flex-basis: 61%
+    .services_cols
+        display: flex
+        flex-wrap: wrap
+    .service_col
+        flex-basis: 50%
+@media screen and (min-width: 997px)
+    .contact-form form
+        display: flex
+        flex-wrap: wrap
+    .input-wrap
+        padding: 0 5px
+        flex-basis: 50%
+        i
+            padding-left: 7px
+    .input-wrap:nth-child(1)
+        flex-basis: 100%
+    .showcase_col
+        flex-basis: calc(100%/3)
+    .showcase_content
+        padding-bottom: 40px
+    .showcase_col:nth-child(2)
+        .showcase_content
+            order: 2
+            padding-top: 40px
+            padding-bottom: 0
+        .showcase_img
+            order: 1
+    .contact_col
+        flex-basis: calc(100%/3)
+
+
+@media screen and (min-width: 1100px)
+    .docs_cols
+        height: auto
+    .docs-expand
+        display: none
+    .docs_col
+        flex-basis: calc(100%/4)
+    .nav
+        background: transparent !important
+    .service_col
+        flex-basis: calc(100%/3)
+    .about_col:nth-child(1)
+        padding-right: 100px
+    .toggle
+        display: none
+    header
+        .links
+            height: auto !important
+            flex-basis: auto
+            overflow: auto
+            hr
+                display: none
+            .link:before
+                content: ''
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: 0
+                width: 0px
+                transition: width .3s ease
+                height: 1px
+                background-color: #00bfd3
+            .link
+                color: white
+                position: relative
+                display: inline-block
+                padding: 0 14px
+                &:hover:before
+                    width: 10px
+
+
+    .scrolled
+        background-color: white !important
+        .logo
+            color: #515562 !important
+        .link
+            color: #515562 !important
+    .logo
+       color: white !important
+@media screen and (max-width: 800px )
+    .wow
+        animation-delay: 0s !important

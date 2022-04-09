@@ -1,0 +1,28 @@
+.work
+    position: relative
+    .work_item
+        padding: 10px
+        cursor: pointer
+        img
+            height: 400px;
+            object-fit: cover
+    .work_grid
+        overflow-y: hidden
+        height: 300px
+        transition: height .5s linear
+    .work_expand
+        width: 100%
+        position: absolute
+        bottom: 50px
+        opacity: .4
+        cursor: pointer
+        background-color: white
+        color: #00bfd3
+        font-weight: bold
+        text-align: center
+        padding: 10px
+        left: 0
+        transition: opacity .2s linear
+        &:hover
+            opacity: .8
+
