@@ -937,6 +937,11 @@ header {
     .work .work_expand:hover {
       opacity: .8; }
 
+.products-items-grid-work .product_img {
+  margin: 0; }
+  .products-items-grid-work .product_img img {
+    border-radius: 0; }
+
 .service-active {
   background-color: #00bfd3;
   color: white; }
@@ -1119,7 +1124,7 @@ footer {
   display: grid;
   gap: 5px;
   padding-top: 5px;
-  grid-auto-rows: 96px;
+  grid-auto-rows: 120px;
   grid-template-columns: repeat(4, 1fr); }
 
 .desc .desc_text > .product_text > div {
