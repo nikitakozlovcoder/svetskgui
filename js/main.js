@@ -237,6 +237,7 @@ function scrollTo(position, time) {
         });
     });
 })();
+
 function type() {
     if (typedBefore) return;
 
@@ -252,43 +253,3 @@ function type() {
 
     });
 }
-
-(function () {
-    let form = document.querySelector('.contact_form');
-    if(!form) {
-        return;
-    }
-    let element = form.elements;
-
-    form.addEventListener('submit', (e)=> {
-
-        if (fetch !== undefined) {
-
-
-            e.preventDefault();
-            if (grecaptcha.getResponse() == '') return;
-            let formData = new FormData();
-
-            formData.append("name", element['name'].value);
-            formData.append("mail", element['mail'].value);
-            formData.append("tel", element['tel'].value);
-            formData.append("message", element['message'].value);
-            console.log(element['message'].value);
-            formData.append("g-recaptcha-response", grecaptcha.getResponse());
-
-            fetch('/mail', {
-                method: 'post',
-                body: formData
-            }).then(function (response) {
-                return response.text();
-            }).then(function (data) {
-                console.log(data)
-            });
-            element['name'].value = '';
-            element['mail'].value = '';
-            element['tel'].value = '';
-            element['message'].value = '';
-        }
-
-    });
-})();

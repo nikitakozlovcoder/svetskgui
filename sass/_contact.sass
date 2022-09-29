@@ -38,6 +38,27 @@
         border: 1px solid #e2e2e2
         border-radius: 3px
         padding: 20px 20px 20px 50px
+    select
+        -webkit-appearance: none;
+        appearance: none;
+        &:focus-visible
+            .select-wrapper::after
+                content: "A";
+    .select-wrapper
+        position: relative;
+    .select-wrapper::after
+        content: "▼";
+        font-size: 1rem;
+        top: 20px;
+        right: 20px;
+        position: absolute;
+    
+    .nice-select
+        display: block;
+        width: 100%;
+        border: 1px solid #e2e2e2;
+        border-radius: 3px;
+        padding: 20px 20px 20px 30px;
     textarea
         margin-top: 15px
         padding: 20px

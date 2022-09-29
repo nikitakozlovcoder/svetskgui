@@ -271,7 +271,7 @@
       </div>
 
         <div class="wrap contact-form">
-            <form class="contact_form" action="/mail" method="post">
+            <form class="contact_form">
                 <div style="width: 100%;">
                     <h2 class="anim_type wow anim_type_input">Напишите нам.</h2>
                 </div>
@@ -290,6 +290,14 @@
                 <div class="input-wrap wow " data-anim="fadeInLeft" style="flex-basis: 100%">
                     <textarea class="input_message" name="message"  placeholder="Введите свой вопрос"></textarea>
                 </div>
+                <br>
+                <label for="type-select">Выберите тип закупки</label>
+                <div class="input-wrap wow select-wrapper" data-anim="fadeInLeft" style="flex-basis: 100%">
+                  <select class="nice-select" name="type-select">
+                    <option>Оптовые закупки</option>
+                    <option>Розничные закупки</option>
+                  </select>
+              </div>
                <!-- <div class="g-recaptcha" data-sitekey="6LcKrGgUAAAAABir_0afQrZSiz2_XO5RpSx461FP" style="margin-top: 20px; margin-left: 5px;"></div>-->
                 <button class="btn btn-active wow" type="submit" data-anim="fadeInUp">Отправить</button>
             </form>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1019,6 +1020,25 @@ header {
     border: 1px solid #e2e2e2;
     border-radius: 3px;
     padding: 20px 20px 20px 50px; }
+  .contact-form select {
+    -webkit-appearance: none;
+    appearance: none; }
+    .contact-form select:focus-visible .select-wrapper::after {
+      content: "A"; }
+  .contact-form .select-wrapper {
+    position: relative; }
+  .contact-form .select-wrapper::after {
+    content: "▼";
+    font-size: 1rem;
+    top: 20px;
+    right: 20px;
+    position: absolute; }
+  .contact-form .nice-select {
+    display: block;
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    padding: 20px 20px 20px 30px; }
   .contact-form textarea {
     margin-top: 15px;
     padding: 20px;
@@ -1137,6 +1157,57 @@ footer {
     padding-bottom: 25px; }
   .desc .desc_contacts .contact_col {
     flex-basis: 100% !important; }
+
+.timeline {
+  margin-right: 20px; }
+  .timeline .timeline__date {
+    position: absolute;
+    right: -35px;
+    padding: 10px;
+    width: 4.25em;
+    background-color: #34435E;
+    text-align: center;
+    line-height: 1.25em;
+    color: #ffffff;
+    font-size: 1em; }
+  .timeline p {
+    font-size: 1em;
+    line-height: 1.75em;
+    border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    margin: 0;
+    padding: 40px;
+    padding-right: 75px;
+    counter-increment: section;
+    position: relative;
+    color: #34435E;
+    /*&:before {
+            content: counter(section);
+            position: absolute;
+            border-radius: 50%;
+            padding: 10px;
+            height: 1.25em;
+            width: 1.25em;
+            background-color: #34435E;
+            text-align: center;
+            line-height: 1.25em;
+            color: #ffffff;
+            font-size: 1em;
+        }*/ }
+  .timeline p {
+    border-right: 3px solid;
+    padding-left: 0; }
+    .timeline p:before {
+      left: 100%;
+      margin-left: -20px; }
+  .timeline p:first-child {
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0; }
+  .timeline p:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
 
 @media screen and (min-width: 500px) {
   .product_col {
@@ -1308,6 +1379,10 @@ footer {
 @media screen and (max-width: 800px) {
   .wow {
     animation-delay: 0s !important; } }
+
+@media screen and (max-width: 1100px) {
+  .timeline {
+    margin-right: 40px; } }
 
 /*!
  * Font Awesome Free 5.1.0 by @fontawesome - https://fontawesome.com
@@ -7351,3 +7426,6 @@ footer {
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
+
+.main-video {
+  width: 100%; }
