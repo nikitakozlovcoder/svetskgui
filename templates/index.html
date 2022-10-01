@@ -34,7 +34,7 @@
           </div>
           <div class="links">
             <div class="links_wrap">
-              <hr><a class="js-link link" href="#home">Главная</a>
+              <hr><a class="js-link link tooltip" href="#home">Главная</a>
                 <a class="js-link link" href="#about">О нас</a>
                 <a class="js-link link" href="#products">Продукция</a>
                 <a class="js-link link" href="#work">Работы</a>
@@ -46,6 +46,7 @@
       </nav>
       <div class="header_content slider_show">
 
+        <div class="slider_inner">
           <div class="slider_item">
             <div class="wrap">
               <div class="slider_item_card">
@@ -55,6 +56,32 @@
                 </div>
             </div>
         </div>
+        <div class="slider_item">
+          <div class="wrap">
+            <div class="slider_item_card">
+              <h1 class="slider_item_title">Качественная продукция</h1>
+              <div class="slider_item_text">Превратит даже самую темную ночь в день.</div>
+                <a class="js-link btn" href="#contact">Свяжитесь с нами</a>
+              </div>
+          </div>
+      </div>
+
+        </div>
+          <div class="controls_slider wrap">
+              <div class="active slider-dot"></div>
+              <div class="slider-dot"></div>
+          </div>
+      </div>
+
+          <!--<div class="slider_item">
+            <div class="wrap">
+              <div class="slider_item_card">
+                <h1 class="slider_item_title">Производство широкого цикла</h1>
+                <div class="slider_item_text">Большой опыт в производстве светодиодоных светильников и осветительного оборудования промышленного класса.</div>
+                  <a class="js-link btn" href="#contact">Свяжитесь с нами</a>
+                </div>
+            </div>
+        </div>-->
       </div>
     </header>
     <section class="showcase">
@@ -297,7 +324,50 @@
                     <option>Оптовые закупки</option>
                     <option>Розничные закупки</option>
                   </select>
-              </div>
+                </div>
+                
+                <div class="checkbox-group">
+                  <div class="checkbox-wrap" data-anim="fadeInLeft">
+                    <input type="checkbox" class="checkbox-input" name="captcha">
+                  </div>
+                  <label class="captcha-label" for="captcha">Я не робот</label>
+                </div>
+                
+
+                <div class="radio-group">
+                  <p>Оставьте свою оценку</p>
+                  <div class="radio-wrap" data-anim="fadeInLeft">
+                    <div class="star-group">
+                      <input type="radio" id="first-star" class="radio-button" name="star">
+                      <label for="first-star">Одна звезда</label>
+                    </div>
+                    <div class="star-group">
+                      <input type="radio" id="second-star" class="radio-button" name="star">
+                      <label for="second-star">Две звезды</label>
+                    </div>
+                    <div class="star-group">
+                      <input type="radio" id="third-star" class="radio-button" name="star">
+                      <label for="third-star">Три звезды</label>
+                    </div>
+                    <div class="star-group">
+                      <input type="radio" id="fourth-star" class="radio-button" name="star">
+                      <label for="fourth-star">Четыре звезды</label>
+                    </div>
+                    <div class="star-group">
+                      <input type="radio" id="fifth-star" class="radio-button" name="star">
+                      <label for="fifth-star">Пять звезд</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="switch-group">
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                
+                
                <!-- <div class="g-recaptcha" data-sitekey="6LcKrGgUAAAAABir_0afQrZSiz2_XO5RpSx461FP" style="margin-top: 20px; margin-left: 5px;"></div>-->
                 <button class="btn btn-active wow" type="submit" data-anim="fadeInUp">Отправить</button>
             </form>

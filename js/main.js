@@ -253,3 +253,84 @@ function type() {
 
     });
 }
+(function () {
+
+    let slider_inner = document.querySelector('.slider_inner');
+    if (!slider_inner) {
+        return;
+    }
+    let item = document.querySelector('.slider_item');
+    let slideNum = 0;
+    function setWidth() {
+
+        slide(slideNum);
+
+    }
+    window.addEventListener('resize', setWidth);
+
+
+
+    function slide(i) {
+        slider_inner.style.transform = `translateX(-${item.offsetWidth * i}px)`;
+        //console.log(item.offsetWidth);
+
+    }
+
+    let interval = setInterval(() =>{
+        slideNum++;
+        if (slideNum > 1) slideNum = 0;
+        console.log('slide!');
+        slide(slideNum);
+        repaintDot(slideNum)
+    }, 3000);
+
+    function repaintDot(dotIndex) {
+
+        document.querySelectorAll('.slider-dot').forEach((element, i) => {
+
+            element.classList.remove('active');
+
+            if (dotIndex === i) element.classList.add('active');
+
+        });
+
+    }
+
+
+
+    document.querySelectorAll('.slider-dot').forEach((element, i) => {
+
+        element.onclick = () => {
+            slideNum = i;
+            repaintDot(i);
+            slide(i);
+            clearInterval(interval);
+
+        };
+
+    });
+
+})();
+(function() {
+    let photo = document.querySelectorAll(".product_img");
+    let modalView = document.querySelector(".modal-view");
+    let img = modalView.querySelector("img");
+    photo.forEach( el => {
+        el.addEventListener("click", function() {
+            let link = el.querySelector("img").dataset.full;
+            img.src = link;
+            modalView.classList.add("modal-view-show");
+        })
+    })
+    if (!modalView) {
+        return;
+    }
+    modalView.querySelector(".modal-view__overlay").addEventListener("click", function() {
+        modalView.classList.remove("modal-view-show");
+    })
+    modalView.querySelector(".image-view__close").addEventListener("click", function() {
+        modalView.classList.remove("modal-view-show");
+    })
+
+    
+})();
