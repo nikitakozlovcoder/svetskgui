@@ -176,32 +176,7 @@ function scrollTo(position, time) {
 
     }
 
-    let elements = document.querySelectorAll('.wow');
-
-    elements.forEach(el => el.style.opacity = 0);
-
-    console.log(document.documentElement.clientHeight +" window height");
-    function animate(){
-        elements.forEach((el) => {
-
-            if (getOffset(el) < window.pageYOffset + document.documentElement.clientHeight-50) {
-
-                el.style.opacity = 1;
-
-                if (el.classList.contains('anim_type')) {
-                    type();
-                }
-                else {
-                    el.classList.add('animated');
-                    el.classList.add(el.dataset.anim);
-                    if (el.dataset.delay)
-                        el.style.animationDelay = el.dataset.delay;
-                }
-            }
-
-        });
-    }
-    window.addEventListener('scroll', animate);
+    
 
 
 
@@ -314,17 +289,20 @@ function type() {
 (function() {
     let photo = document.querySelectorAll(".product_img");
     let modalView = document.querySelector(".modal-view");
+    let imageLink = document.querySelector(".image-link");
+    if (!modalView) {
+        return;
+    }
     let img = modalView.querySelector("img");
     photo.forEach( el => {
         el.addEventListener("click", function() {
             let link = el.querySelector("img").dataset.full;
+            imageLink.href = link;
             img.src = link;
             modalView.classList.add("modal-view-show");
         })
     })
-    if (!modalView) {
-        return;
-    }
+    
     modalView.querySelector(".modal-view__overlay").addEventListener("click", function() {
         modalView.classList.remove("modal-view-show");
     })
@@ -333,4 +311,25 @@ function type() {
     })
 
     
+})();
+(function () {
+    let up_scroll = document.querySelector(".up-scroll");
+    up_scroll.addEventListener("click", function() {
+
+    })
+})();
+
+(function () {
+    function ControlUpScrollVisibility() {
+        
+        let up_scroll = document.querySelector(".up-scroll");
+        if (window.scrollY > window.innerHeight-100) {
+            up_scroll.classList.add("up-scroll-show");
+        }
+        else {
+            up_scroll.classList.remove("up-scroll-show")
+        }
+    }
+    ControlUpScrollVisibility();
+    document.addEventListener("scroll", ControlUpScrollVisibility);
 })();

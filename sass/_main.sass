@@ -108,6 +108,27 @@ a
 
 .section_title
     max-width: 600px
-.wow
-    //visibility: hidden
-    will-change: opacity, transform
+
+.up-scroll
+    display: none
+    position: fixed
+    right: 20px
+    bottom: 20px
+    cursor: pointer
+    background-color: #565656
+    border-radius: 4px
+    opacity: 0.5
+    transition: 0.2s
+    width: 45px
+    height: 45px
+    align-items: center
+    justify-content: center
+    i
+        font-size: 25px;
+        color: white;
+        padding: 10px
+    &:hover
+        background-color: #00bfd3
+        opacity: 1
+    &-show
+        display: flex

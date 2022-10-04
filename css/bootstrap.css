@@ -730,8 +730,29 @@ a {
 .section_title {
   max-width: 600px; }
 
-.wow {
-  will-change: opacity, transform; }
+.up-scroll {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  background-color: #565656;
+  border-radius: 4px;
+  opacity: 0.5;
+  transition: 0.2s;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center; }
+  .up-scroll i {
+    font-size: 25px;
+    color: white;
+    padding: 10px; }
+  .up-scroll:hover {
+    background-color: #00bfd3;
+    opacity: 1; }
+  .up-scroll-show {
+    display: flex; }
 
 header {
   background-color: #3f4246;
@@ -1129,13 +1150,17 @@ header {
     height: 22px; }
 
 .switch-group {
-  width: 100%; }
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center; }
 
 .switch {
   position: relative;
   display: inline-block;
   width: 40px;
-  height: 22px; }
+  height: 22px;
+  margin-right: 15px; }
 
 /* Hide default HTML checkbox */
 .switch input {
@@ -1270,6 +1295,32 @@ footer {
   .search-icon i {
     font-size: 20px;
     color: #00bfd3; }
+
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center; }
+  .pagination .pagination-item {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #787878;
+    background-color: white;
+    color: #787878; }
+  .pagination .pagination-item:not(:nth-child(1)) {
+    border-left: none; }
+  .pagination .pagination-item:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
+  .pagination .pagination-item:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; }
+  .pagination .selected {
+    background-color: #4dd7e6;
+    border-color: #4dd7e6;
+    color: white; }
 
 .desc .desc_preview_image_wrap {
   height: 100%;
@@ -1522,10 +1573,6 @@ footer {
       color: #515562 !important; }
   .logo {
     color: white !important; } }
-
-@media screen and (max-width: 800px) {
-  .wow {
-    animation-delay: 0s !important; } }
 
 @media screen and (max-width: 1100px) {
   .timeline {
